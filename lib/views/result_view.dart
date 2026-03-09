@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:lottie/lottie.dart';
 
 class ResultView extends StatelessWidget {
   final double imc;
@@ -71,6 +72,9 @@ class ResultView extends StatelessWidget {
               onPressed: abrirVideo,
               child: const Text("Ver rutina de ejercicio"),
             ),
+
+            //Aqui se agrega la animacion de Lottie
+            Lottie.asset("assets/animations/exercise.json", height: 200),
           ],
         ),
       ),
