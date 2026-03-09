@@ -15,7 +15,20 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'IMC App',
-      theme: ThemeData(useMaterial3: true, colorSchemeSeed: Colors.blue),
+
+      //RETO TEMAS AUTOMATICOS
+      theme: ThemeData(
+        brightness: Brightness.light,
+        useMaterial3: true,
+        colorSchemeSeed: Colors.blue,
+      ),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+        useMaterial3: true,
+        colorSchemeSeed: Colors.blue,
+      ),
+      themeMode: ThemeMode.system,
+
       home: const HomeView(), // Aqui llamamos la vista
     );
   }
