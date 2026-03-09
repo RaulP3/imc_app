@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import '../controller/imc_con.dart';
 import 'result_view.dart';
+import 'package:flutter/services.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -81,6 +82,7 @@ class _HomeViewState extends State<HomeView> {
                     max: 220,
                     value: altura,
                     onChanged: (value) {
+                      HapticFeedback.selectionClick(); //Vibracion al seleccionar
                       setState(() {
                         altura = value;
                       });
